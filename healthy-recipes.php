@@ -1,0 +1,152 @@
+<?php
+session_start();
+if (!isset($_SESSION['user'])) {
+    header("Location: login.html"); // or wherever your login form is
+    exit();
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Healthy Recipe Basics</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+ <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #f4f4f4;
+      color: #333;
+      padding: 20px;
+    }
+
+    header {
+      background: #fff;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #2c3e50;
+    }
+
+    h1 {
+      margin: 30px 0 20px;
+      font-size: 2rem;
+      text-align: center;
+      color: #34495e;
+    }
+
+    .tips-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .tip {
+      display: flex;
+      align-items: center;
+      background: #fff;
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s ease;
+    }
+
+    .tip:hover {
+      transform: translateY(-3px);
+    }
+
+    .tip img {
+      width: 60px;
+      height: 60px;
+      margin-right: 20px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    .tip-text {
+      flex: 1;
+      font-size: 1.1rem;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin: 30px auto 0;
+      text-align: center;
+      display: block;
+      color: #3498db;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      .tip {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .tip img {
+        margin-bottom: 10px;
+        width: 100%;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="logo">Wellness Plate</div>
+  </nav>
+</header>
+
+<h1>Healthy Cooking Basics</h1>
+
+<div class="tips-list">
+  <div class="tip-item">
+    <img src="https://i.ibb.co/N6WsYbJw/download.jpg" alt="Vegetables">
+    <div class="tip-text">Use fresh, seasonal vegetables.</div>
+  </div>
+  <div class="tip-item">
+    <img src="https://i.ibb.co/H6K7YBL/download-1.jpg" alt="Grains">
+    <div class="tip-text">Choose whole grains over refined grains.</div>
+  </div>
+  <div class="tip-item">
+    <img src="https://i.ibb.co/Q3fW05Yk/download-2.jpg" alt="Salt and Sugar">
+    <div class="tip-text">Minimize processed sugar and salt.</div>
+  </div>
+  <div class="tip-item">
+    <img src="https://i.ibb.co/fYsy22Zr/download-3.jpg" alt="Healthy oils">
+    <div class="tip-text">Use healthy oils like olive or coconut oil.</div>
+  </div>
+  <div class="tip-item">
+    <img src="https://i.ibb.co/d9tysGh/download-4.jpg" alt="Balanced meal">
+    <div class="tip-text">Balance your plate: protein, carbs, and healthy fats.</div>
+  </div>
+</div>
+
+<a href="index.php" class="back-link">← Back to Home</a>
+
+</body>
+</html>
+

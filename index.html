@@ -1,0 +1,239 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['user_id'])) {
+    header("Location: login.html"); // or login.php
+    exit();
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wellness Plate</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/YOUR-FONT-AWESOME-KEY.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        nav {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            justify-content: space-between;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        .nav-links li {
+            display: inline;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        .auth-buttons a {
+            text-decoration: none;
+            padding: 10px 15px;
+            background: #27ae60;
+            color: white;
+            border-radius: 5px;
+            margin-left: 10px;
+        }
+        #hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 40px;
+            background: white;
+        }
+        .hero-content {
+            max-width: 50%;
+        }
+        .hero-content h1 {
+            font-size: 36px;
+            font-weight: bold;
+            color: #333;
+        }
+        .hero-content p {
+            font-size: 18px;
+            margin: 10px 0;
+            color: #555;
+        }
+        .hero-content .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #27ae60;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .hero-content .btn:hover {
+            background: #219150;
+        }
+        .hero-image {
+            max-width: 45%;
+            border-radius: 10px;
+        }
+        .section-container {
+            padding: 40px;
+            background: white;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .section-item {
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .stress-management {
+            background: #ffcc80;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        .stress-management .text-content {
+            max-width: 50%;
+        }
+        .stress-management img {
+            max-width: 45%;
+            border-radius: 10px;
+        }
+        .healthy-recipes {
+            background: #81c784;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        .healthy-recipes .text-content {
+            max-width: 50%;
+        }
+        .healthy-recipes img {
+            max-width: 45%;
+            border-radius: 10px;
+        }
+        .fitness-basics {
+            background: #64b5f6;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        .fitness-basics .text-content {
+            max-width: 50%;
+        }
+        .fitness-basics img {
+            max-width: 45%;
+            border-radius: 10px;
+        }
+        .life-essentials {
+            background: #ba68c8;
+        }
+        .scroll-target {
+            padding-top: 20px;
+            transition: all 0.5s ease-in-out;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #2c3e50;
+            color: white;
+            margin-top: 40px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Wellness Plate</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="healthy-recipes.html">Diet Recipes basics</a></li>
+                <li><a href="fitness-basics.html">Fitness</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <a href="register.html" class="btn">Register</a>
+                <a href="login.html" class="btn">Login</a>
+            </div>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Welcome to Wellness Plate</h1>
+            <p>Your guide to a healthier lifestyle with expert diet tips and fitness insights.</p>
+            <a href="#in-this-section" class="btn">Learn More</a>
+        </div>
+        <img src="https://i.ibb.co/JwCmPhJj/1.jpg" alt="Healthy Lifestyle" class="hero-image">
+    </section>
+
+  	<section id="in-this-section" class="scroll-target section-container">
+    <h2>In This Section</h2>
+
+    <a href="stress-management.html" class="section-item stress-management">
+        <div class="text-content">
+            <h3>Stress Management</h3>
+            <p>Learn effective ways to manage stress for a balanced life.</p>
+        </div>
+        <img src="https://i.ibb.co/jvwfpQVk/Stress-Management-Logo.png" alt="Stress Management">
+    </a>
+
+    <a href="healthy-recipes.html" class="section-item healthy-recipes">
+        <div class="text-content">
+            <h3>Basic Rules for Healthy Recipes</h3>
+            <p>Discover nutritious and delicious recipes for a healthy lifestyle.</p>
+        </div>
+        <img src="https://i.ibb.co/bjJdvy05/NMD-Tandoori-Chicken-Salad-1x1-1-2000-100151aa95db4c39b4f0f36a21db08f5.jpg" alt="Healthy Recipes">
+    </a>
+
+    <a href="fitness-basics.html" class="section-item fitness-basics">
+        <div class="text-content">
+            <h3>Fitness Basics</h3>
+            <p>Understand the essentials of staying active and fit.</p>
+        </div>
+        <img src="https://i.ibb.co/rfbsS3sY/Fitness-Basics-1.png" alt="Fitness Basics">
+    </a>
+</section>
+
+
+
+    <footer>
+        <p>&copy; 2025 Wellness Plate. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
+
