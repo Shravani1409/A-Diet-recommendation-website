@@ -25,5 +25,16 @@ An interactive diet recommendation web application that generates personalized d
 4. Start Apache & MySQL
 5. Open localhost/project-folder
 
+## 📸 Website Screenshots
+
+### 🏠 Home Page
+![Home Page](userLogin.png)
+
+### 🔐 Login Page
+![Login Page](login.png)
+
+### 📊 Diet Plan Result
+![Diet Result](result.png)
+
 ## 👩‍💻 Author
 Shravani K
