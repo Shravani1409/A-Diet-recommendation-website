@@ -28,13 +28,16 @@ An interactive diet recommendation web application that generates personalized d
 ## 📸 Website Screenshots
 
 ### 🏠 Home Page
-![Home Page](userLogin.png)
+![Home Page](userLoginPage.png)
 
-### 🔐 Login Page
-![Login Page](login.png)
+### 🔐 Register Page
+![Login Page](RegisterPage.png)
 
-### 📊 Diet Plan Result
-![Diet Result](result.png)
+### 📊 Diet Plan 
+![Diet Result](dietPlanGeneration.png)
+
+### 📊 Fitness tips, stress management tips
+![Fitness](fitnessBasics.png) ![stress management](stressManagement.png)
 
 ## 👩‍💻 Author
 Shravani K
